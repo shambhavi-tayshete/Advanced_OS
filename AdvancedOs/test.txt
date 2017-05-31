@@ -1,0 +1,44 @@
+qemu-system-i386 -hda obj/kern/kernel.img -serial mon:stdio -gdb tcp::26000 -D qemu.log 
+6828 decimal is 15254 octal!
+Physical memory: 66556K available, base = 640K, extended = 65532K npages:0
+
+kern:56  IO:96   kernStart:256 
+check_page_alloc() succeeded!
+
+VA:ef000000, PA:117000, size:135168
+Value of PTE in boot MAP:117005  diff of tmpVA:0x0,  value of count:0
+Value of PTE in boot MAP:118005  diff of tmpVA:0x1000,  value of count:4096
+Value of PTE in boot MAP:119005  diff of tmpVA:0x2000,  value of count:8192
+Value of PTE in boot MAP:11a005  diff of tmpVA:0x3000,  value of count:12288
+Value of PTE in boot MAP:11b005  diff of tmpVA:0x4000,  value of count:16384
+Value of PTE in boot MAP:11c005  diff of tmpVA:0x5000,  value of count:20480
+Value of PTE in boot MAP:11d005  diff of tmpVA:0x6000,  value of count:24576
+Value of PTE in boot MAP:11e005  diff of tmpVA:0x7000,  value of count:28672
+Value of PTE in boot MAP:11f005  diff of tmpVA:0x8000,  value of count:32768
+Value of PTE in boot MAP:120005  diff of tmpVA:0x9000,  value of count:36864
+Value of PTE in boot MAP:121005  diff of tmpVA:0xa000,  value of count:40960
+Value of PTE in boot MAP:122005  diff of tmpVA:0xb000,  value of count:45056
+Value of PTE in boot MAP:123005  diff of tmpVA:0xc000,  value of count:49152
+Value of PTE in boot MAP:124005  diff of tmpVA:0xd000,  value of count:53248
+Value of PTE in boot MAP:125005  diff of tmpVA:0xe000,  value of count:57344
+Value of PTE in boot MAP:126005  diff of tmpVA:0xf000,  value of count:61440
+Value of PTE in boot MAP:127005  diff of tmpVA:0x10000,  value of count:65536
+Value of PTE in boot MAP:128005  diff of tmpVA:0x11000,  value of count:69632
+Value of PTE in boot MAP:129005  diff of tmpVA:0x12000,  value of count:73728
+Value of PTE in boot MAP:12a005  diff of tmpVA:0x13000,  value of count:77824
+Value of PTE in boot MAP:12b005  diff of tmpVA:0x14000,  value of count:81920
+Value of PTE in boot MAP:12c005  diff of tmpVA:0x15000,  value of count:86016
+Value of PTE in boot MAP:12d005  diff of tmpVA:0x16000,  value of count:90112
+Value of PTE in boot MAP:12e005  diff of tmpVA:0x17000,  value of count:94208
+Value of PTE in boot MAP:12f005  diff of tmpVA:0x18000,  value of count:98304
+Value of PTE in boot MAP:130005  diff of tmpVA:0x19000,  value of count:102400
+Value of PTE in boot MAP:131005  diff of tmpVA:0x1a000,  value of count:106496
+Value of PTE in boot MAP:132005  diff of tmpVA:0x1b000,  value of count:110592
+Value of PTE in boot MAP:133005  diff of tmpVA:0x1c000,  value of count:114688
+Value of PTE in boot MAP:134005  diff of tmpVA:0x1d000,  value of count:118784
+Value of PTE in boot MAP:135005  diff of tmpVA:0x1e000,  value of count:122880
+Value of PTE in boot MAP:136005  diff of tmpVA:0x1f000,  value of count:126976
+Value of PTE in boot MAP:137005  diff of tmpVA:0x20000,  value of count:131072kernel panic at kern/pmap.c:731: assertion failed: check_va2pa(pgdir, UPAGES + i) == PADDR(pages) + i
+Welcome to the JOS kernel monitor!
+Type 'help' for a list of commands.
+K> 
